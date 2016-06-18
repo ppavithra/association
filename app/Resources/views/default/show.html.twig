@@ -1,0 +1,9 @@
+{% for message in message %}
+       <td>
+        auteur :  <th>{{ message.auteur }}</th>
+         titre  :<th>{{ message.title }}</th>
+         commentaires : <th>{{ message.text }}</th><br>
+       </td>
+{% endfor %}
+
+<a href="{{ path('messagerie') }}">poster une message</a>

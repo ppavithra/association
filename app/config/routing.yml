@@ -1,0 +1,14 @@
+index:
+    path:     /index
+    defaults: { _controller: AppBundle:Default:index}
+
+messagerie:
+    path:     /message
+    defaults: { _controller: AppBundle:Default:addmessage}
+
+show:
+    path:     /conversation/{id}
+    defaults: { _controller: AppBundle:Default:show}
+    
+
+
