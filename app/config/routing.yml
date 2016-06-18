@@ -1,5 +1,5 @@
 index:
-    path:     /index
+    path:     /
     defaults: { _controller: AppBundle:Default:index}
 
 messagerie:
@@ -7,7 +7,7 @@ messagerie:
     defaults: { _controller: AppBundle:Default:addmessage}
 
 show:
-    path:     /conversation/{id}
+    path:     /conversation
     defaults: { _controller: AppBundle:Default:show}
     
 

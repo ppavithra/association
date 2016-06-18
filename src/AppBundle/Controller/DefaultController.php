@@ -56,7 +56,7 @@ class DefaultController extends Controller
         ));
     }
 
-    public function showAction($id)
+    public function showAction()
     {       
      $messages = $this  -> getDoctrine()
                         ->getRepository('AppBundle:Message')
