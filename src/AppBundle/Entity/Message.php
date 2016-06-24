@@ -42,6 +42,22 @@ class Message
      */
     private $text;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Sujet", inversedBy="messages")
+     * @ORM\JoinColumn(name="id_sujet", referencedColumnName="id_sujet")
+     */
+    private $sujet;
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    protected $created;
+
+    public function __construct()
+    {
+
+        $this->setCreated(new \DateTime());
+    }
+
 
 
 
@@ -128,5 +144,53 @@ class Message
     public function getText()
     {
         return $this->text;
+    }
+
+    /**
+     * Set created
+     *
+     * @param \DateTime $created
+     *
+     * @return Message
+     */
+    public function setCreated($created)
+    {
+        $this->created = $created;
+
+        return $this;
+    }
+
+    /**
+     * Get created
+     *
+     * @return \DateTime
+     */
+    public function getCreated()
+    {
+        return $this->created;
+    }
+
+    /**
+     * Set sujet
+     *
+     * @param \AppBundle\Entity\Sujet $sujet
+     *
+     * @return Message
+     */
+    public function setSujet(\AppBundle\Entity\Sujet $sujet = null)
+    {
+        $this->sujet = $sujet;
+
+        return $this;
+    }
+
+    /**
+     * Get sujet
+     *
+     * @return \AppBundle\Entity\Sujet
+     */
+    public function getSujet()
+    {
+        return $this->sujet;
     }
 }

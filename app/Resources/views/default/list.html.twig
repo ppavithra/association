@@ -1,0 +1,14 @@
+<table>
+	<tr>
+   		<th>TITRE</th>
+   		<th>AUTEUR</th>
+	</tr>
+	{% for topic in topics %}
+		<tr>
+       		<td>{{ topic.titre }}</td>
+       		<td>{{ topic.messages[0].auteur }}</td>
+		</tr>
+	{% endfor %}
+</table>
+
+<a href="{{ path('topic_new') }}">poster un sujet</a>

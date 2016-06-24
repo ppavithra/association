@@ -20,16 +20,11 @@ class MessageType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-
-
             ->add('auteur', TextType::class)
             ->add('title', TextType::class)
             ->add('text', TextareaType::class)
-            ->add('save', SubmitType::class, array('label' => 'valider'))
-            ->getForm();
-
-            
-            
+            ->add('save', SubmitType::class, ['label' => 'valider'])
+        ;
     }
 
     public function configureOptions(OptionsResolver $resolver)

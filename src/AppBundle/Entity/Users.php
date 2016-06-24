@@ -54,6 +54,8 @@ class Users
      */
     private $password;
     
+     
+    
 
 
     

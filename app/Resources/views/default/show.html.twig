@@ -2,7 +2,8 @@
        <td>
         auteur :  <th>{{ message.auteur }}</th>
          titre  :<th>{{ message.title }}</th>
-         commentaires : <th>{{ message.text }}</th><br>
+         commentaires : <th>{{ message.text }}</th>
+         <a href="{{ path('messagerie') }}">Repondre à ce message</a><br>
        </td>
 {% endfor %}
 
